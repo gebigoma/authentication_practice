@@ -1,0 +1,11 @@
+<h1><%= @user.name %></h1>
+<h3><%= @user.email %></h3>
+
+<ul>
+<!-- user already defined in controller -->
+<% for product in @user.products %>
+ <li><%= product.title %></li>
+<% end %>
+</ul>
+
+<%= link_to "Delete Account", user_path(current_user.id), method: 'delete' %>

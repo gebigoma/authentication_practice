@@ -1,0 +1,13 @@
+<h1>Users#index</h1>
+
+<ul>
+<% for u in @users %>
+ <li><%= u.name  %></li>
+<% end %>
+</ul>
+
+<ul>
+<% for p in @products %>
+ <li><%= link_to "#{p.title}", product_path(p)  %></li>
+<% end %>
+</ul>
